@@ -13,3 +13,7 @@
   Use console.log() to display results
 
 */
+
+function verifyValidOption(string) {
+  return;
+}
