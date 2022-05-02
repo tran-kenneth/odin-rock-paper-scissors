@@ -14,6 +14,10 @@
 
 */
 
+function makeCaseInsensitive(string) {
+  return;
+}
+
 function verifyValidOption(string) {
   switch (string) {
     case "rock":
