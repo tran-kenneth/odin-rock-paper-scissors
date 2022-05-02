@@ -15,5 +15,12 @@
 */
 
 function verifyValidOption(string) {
-  return;
+  switch (string) {
+    case "rock":
+    case "paper":
+    case "scissors":
+      return true;
+    default:
+      return false;
+  }
 }
