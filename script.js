@@ -15,7 +15,7 @@
 */
 
 function makeCaseInsensitive(string) {
-  return;
+  return string.toLowerCase();
 }
 
 function verifyValidOption(string) {
