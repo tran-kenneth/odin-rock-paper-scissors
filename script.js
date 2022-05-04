@@ -14,6 +14,12 @@
 
 */
 
+function computerPlay() {
+  const OPTIONS = ["rock", "paper", "scissors"];
+  const choice = OPTIONS[Math.floor(Math.random())];
+  return choice;
+}
+
 function makeCaseInsensitive(string) {
   return string.toLowerCase();
 }
