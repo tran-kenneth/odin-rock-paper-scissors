@@ -2,7 +2,7 @@
   Rock Paper Scissors (RPS) Game Pseudocode
 
   function computerPlay -> returns rock, paper or scissors 
-  function playRound -> plays a single round of RPS, take two params: playerSelection, computerPlay
+  function playRound -> plays a single round of RPS, take two params: playerSelection, computerSelection
     returns string to declare winner "You Lose/Win. X beats Y"
 
   function playerSelection -> takes player selection, make it case insensitive!
@@ -18,6 +18,10 @@ function computerPlay() {
   const OPTIONS = ["rock", "paper", "scissors"];
   const choice = OPTIONS[Math.floor(Math.random() * 3)];
   return choice;
+}
+
+function playRound(playerSelection, computerSelection) {
+  return;
 }
 
 function makeCaseInsensitive(string) {
