@@ -16,7 +16,7 @@
 
 function computerPlay() {
   const OPTIONS = ["rock", "paper", "scissors"];
-  const choice = OPTIONS[Math.floor(Math.random())];
+  const choice = OPTIONS[Math.floor(Math.random() * 3)];
   return choice;
 }
 
