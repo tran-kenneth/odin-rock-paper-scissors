@@ -20,6 +20,10 @@ function computerPlay() {
   return choice;
 }
 
+function askPlayerInput() {
+  return;
+}
+
 function playRound(playerSelection, computerSelection) {
   return;
 }
