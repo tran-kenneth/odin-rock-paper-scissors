@@ -21,7 +21,13 @@ function computerPlay() {
 }
 
 function askPlayerInput() {
-  return;
+  let playerChoice = "";
+  while (!verifyValidOption(playerChoice)) {
+    playerChoice = makeCaseInsensitive(
+      prompt("Type in 'rock', 'paper', or 'scissors'")
+    );
+  }
+  return playerChoice;
 }
 
 function playRound(playerSelection, computerSelection) {
