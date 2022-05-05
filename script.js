@@ -48,3 +48,7 @@ function verifyValidOption(string) {
       return false;
   }
 }
+
+function game() {
+  return;
+}
