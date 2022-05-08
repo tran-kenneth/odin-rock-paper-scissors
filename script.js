@@ -14,6 +14,10 @@
 
 */
 
+/**
+ * Function that generates a computer play for rock paper scissors.
+ * @returns {String}  rock, paper, or scissors
+ */
 function computerPlay() {
   const OPTIONS = ["rock", "paper", "scissors"];
   const choice = OPTIONS[Math.floor(Math.random() * 3)];
