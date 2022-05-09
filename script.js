@@ -35,7 +35,20 @@ function askPlayerInput() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  return;
+  let result = "";
+
+  if (playerSelection == computerSelection) {
+    result = `It's a draw! Both players selected ${playerSelection}!`;
+  } else if (
+    (playerSelection == "rock" && computerSelection == "scissors") ||
+    (playerSelection == "scissors" && computerSelection == "paper") ||
+    (playerSelection == "paper" && computerSelection == "rock")
+  ) {
+    result = `You win! ${playerSelection} beats ${computerSelection}!`;
+  } else {
+    result = `You lose! ${computerSelection} beats ${playerSelection}!`;
+  }
+  return result;
 }
 
 function makeCaseInsensitive(string) {
