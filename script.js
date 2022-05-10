@@ -67,5 +67,11 @@ function verifyValidOption(string) {
 }
 
 function game() {
+  const scoreRecord = {
+    playerWin: 0,
+    draw: 0,
+    playLoss: 0,
+  };
+
   return;
 }
