@@ -73,5 +73,10 @@ function game() {
     playLoss: 0,
   };
 
+  for (let gameNum = 1; gameNum <= 5; gameNum++) {
+    let playerInput = askPlayerInput();
+    let roundResult = playRound(playerInput, computerPlay());
+  }
+
   return;
 }
