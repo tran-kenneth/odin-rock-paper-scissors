@@ -35,18 +35,24 @@ function askPlayerInput() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  let result = "";
+  let result = {
+    message: "",
+    record: "",
+  };
 
   if (playerSelection == computerSelection) {
-    result = `It's a draw! Both players selected ${playerSelection}!`;
+    result.message = `It's a draw! Both players selected ${playerSelection}!`;
+    result.record = "draw";
   } else if (
     (playerSelection == "rock" && computerSelection == "scissors") ||
     (playerSelection == "scissors" && computerSelection == "paper") ||
     (playerSelection == "paper" && computerSelection == "rock")
   ) {
-    result = `You win! ${playerSelection} beats ${computerSelection}!`;
+    result.message = `You win! ${playerSelection} beats ${computerSelection}!`;
+    result.record = "playerWin";
   } else {
-    result = `You lose! ${computerSelection} beats ${playerSelection}!`;
+    result.message = `You lose! ${computerSelection} beats ${playerSelection}!`;
+    result.record = "playerLoss";
   }
   return result;
 }
@@ -70,13 +76,15 @@ function game() {
   const scoreRecord = {
     playerWin: 0,
     draw: 0,
-    playLoss: 0,
+    playerLoss: 0,
   };
 
   for (let gameNum = 1; gameNum <= 5; gameNum++) {
     let playerInput = askPlayerInput();
     let roundResult = playRound(playerInput, computerPlay());
+
+    scoreRecord[roundResult.record]++;
   }
 
-  return;
+  return scoreRecord;
 }
