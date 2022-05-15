@@ -26,11 +26,11 @@ function computerPlay() {
 
 function askPlayerInput() {
   let playerChoice = "";
-  while (!verifyValidOption(playerChoice)) {
+  do {
     playerChoice = makeCaseInsensitive(
       prompt("Type in 'rock', 'paper', or 'scissors'")
     );
-  }
+  } while (!verifyValidOption(playerChoice));
   return playerChoice;
 }
 
