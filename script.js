@@ -87,7 +87,7 @@ function game() {
     console.log(roundResult.message);
     scoreRecord[roundResult.record]++;
     console.log(
-      `Your score is: ${scoreRecord.playerWin} wins, ${scoreRecord.draw} draws, ${scoreRecord.playerLoss} losses.`
+      `End of round ${gameNum}.\n Your score is: ${scoreRecord.playerWin} wins, ${scoreRecord.draw} draws, ${scoreRecord.playerLoss} losses.`
     );
   }
 
