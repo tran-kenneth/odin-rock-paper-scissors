@@ -68,6 +68,7 @@ function verifyValidOption(string) {
     case "scissors":
       return true;
     default:
+      alert("That was an invalid option. Try again.");
       return false;
   }
 }
