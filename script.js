@@ -84,7 +84,11 @@ function game() {
     let playerInput = askPlayerInput();
     let roundResult = playRound(playerInput, computerPlay());
 
+    console.log(roundResult.message);
     scoreRecord[roundResult.record]++;
+    console.log(
+      `Your score is: ${scoreRecord.playerWin} wins, ${scoreRecord.draw} draws, ${scoreRecord.playerLoss} losses.`
+    );
   }
 
   return scoreRecord;
