@@ -91,5 +91,5 @@ function game() {
     );
   }
 
-  return scoreRecord;
+  console.log("Game over.");
 }
