@@ -80,6 +80,10 @@ function game() {
 
 //game();
 
+/*
+  Add event listeners for each rps button.
+  Each button should call the playRound function when clicked.
+*/
 const gameButtons = document.querySelectorAll(".rps-btn");
 
 gameButtons.forEach((button) => {
