@@ -79,3 +79,9 @@ function game() {
 }
 
 //game();
+
+const gameButtons = document.querySelectorAll(".rps-btn");
+
+gameButtons.forEach((button) => {
+  button.addEventListener("click", console.log);
+});
