@@ -1,19 +1,3 @@
-/*
-  Rock Paper Scissors (RPS) Game Pseudocode
-
-  function computerPlay -> returns rock, paper or scissors 
-  function playRound -> plays a single round of RPS, take two params: playerSelection, computerSelection
-    returns string to declare winner "You Lose/Win. X beats Y"
-
-  function playerSelection -> takes player selection, make it case insensitive!
-
-  function game() -> calls playRound, to play 5 rounds, keep score.
-
-  Use prompt() to get user input. 
-  Use console.log() to display results
-
-*/
-
 /**
  * Function that generates a computer play for rock paper scissors.
  * @returns {String}  rock, paper, or scissors
