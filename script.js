@@ -8,16 +8,6 @@ function computerPlay() {
   return choice;
 }
 
-function askPlayerInput() {
-  let playerChoice = "";
-  do {
-    playerChoice = makeCaseInsensitive(
-      prompt("Type in 'rock', 'paper', or 'scissors'")
-    );
-  } while (!verifyValidOption(playerChoice));
-  return playerChoice;
-}
-
 function checkWin(playerMove, computerMove) {
   let result = {
     message: "",
