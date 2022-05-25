@@ -3,7 +3,7 @@
  * @returns {String}  rock, paper, or scissors
  */
 function computerPlay() {
-  const OPTIONS = ["rock", "paper", "scissors"];
+  const OPTIONS = ["Rock", "Paper", "Scissors"];
   const choice = OPTIONS[Math.floor(Math.random() * 3)];
   return choice;
 }
@@ -18,7 +18,11 @@ function askPlayerInput() {
   return playerChoice;
 }
 
-function playRound(playerSelection, computerSelection) {
+// Modified playRound function is called on click event.
+// First parameter, is the click event -> extract innerHTML as the player selection.
+function playRound(clickEvent) {
+  const playerSelection = this.innerHTML;
+  const computerSelection = computerPlay();
   let result = {
     message: "",
     record: "",
@@ -28,9 +32,9 @@ function playRound(playerSelection, computerSelection) {
     result.message = `It's a draw! Both players selected ${playerSelection}!`;
     result.record = "draw";
   } else if (
-    (playerSelection == "rock" && computerSelection == "scissors") ||
-    (playerSelection == "scissors" && computerSelection == "paper") ||
-    (playerSelection == "paper" && computerSelection == "rock")
+    (playerSelection == "Rock" && computerSelection == "Scissors") ||
+    (playerSelection == "Scissors" && computerSelection == "Paper") ||
+    (playerSelection == "Paper" && computerSelection == "Rock")
   ) {
     result.message = `You win! ${playerSelection} beats ${computerSelection}!`;
     result.record = "playerWin";
@@ -38,6 +42,8 @@ function playRound(playerSelection, computerSelection) {
     result.message = `You lose! ${computerSelection} beats ${playerSelection}!`;
     result.record = "playerLoss";
   }
+
+  console.log(playerSelection, computerSelection, result);
   return result;
 }
 
@@ -92,5 +98,5 @@ function logText(e) {
 }
 
 gameButtons.forEach((button) => {
-  button.addEventListener("click", logText);
+  button.addEventListener("click", playRound);
 });
