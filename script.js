@@ -86,6 +86,11 @@ function game() {
 */
 const gameButtons = document.querySelectorAll(".rps-btn");
 
+// Temporary helper function to log
+function logText(e) {
+  console.log(this.innerHTML);
+}
+
 gameButtons.forEach((button) => {
-  button.addEventListener("click", console.log);
+  button.addEventListener("click", logText);
 });
