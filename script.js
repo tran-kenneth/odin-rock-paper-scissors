@@ -18,33 +18,38 @@ function askPlayerInput() {
   return playerChoice;
 }
 
-// Modified playRound function is called on click event.
-// First parameter, is the click event -> extract innerHTML as the player selection.
-function playRound(clickEvent) {
-  const playerSelection = this.innerHTML;
-  const computerSelection = computerPlay();
+function checkWin(playerMove, computerMove) {
   let result = {
     message: "",
     record: "",
   };
 
-  if (playerSelection == computerSelection) {
-    result.message = `It's a draw! Both players selected ${playerSelection}!`;
+  if (playerMove == computerMove) {
+    result.message = `It's a draw! Both players selected ${playerMove}!`;
     result.record = "draw";
   } else if (
-    (playerSelection == "Rock" && computerSelection == "Scissors") ||
-    (playerSelection == "Scissors" && computerSelection == "Paper") ||
-    (playerSelection == "Paper" && computerSelection == "Rock")
+    (playerMove == "Rock" && computerMove == "Scissors") ||
+    (playerMove == "Scissors" && computerMove == "Paper") ||
+    (playerMove == "Paper" && computerMove == "Rock")
   ) {
-    result.message = `You win! ${playerSelection} beats ${computerSelection}!`;
+    result.message = `You win! ${playerMove} beats ${computerMove}!`;
     result.record = "playerWin";
   } else {
-    result.message = `You lose! ${computerSelection} beats ${playerSelection}!`;
+    result.message = `You lose! ${computerMove} beats ${playerMove}!`;
     result.record = "playerLoss";
   }
 
-  console.log(playerSelection, computerSelection, result);
+  console.log(playerMove, computerMove, result);
   return result;
+}
+
+// Modified playRound function is called on click event.
+// First parameter, is the click event -> extract innerHTML as the player selection.
+function playRound(clickEvent) {
+  const playerSelection = this.innerHTML;
+  const computerSelection = computerPlay();
+
+  return checkWin(playerSelection, computerSelection);
 }
 
 function makeCaseInsensitive(string) {
