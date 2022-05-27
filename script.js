@@ -60,10 +60,6 @@ function playRound(clickEvent) {
   return checkWin(playerSelection, computerSelection);
 }
 
-function makeCaseInsensitive(string) {
-  return string.toLowerCase();
-}
-
 function verifyValidOption(string) {
   switch (string) {
     case "rock":
