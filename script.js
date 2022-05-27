@@ -1,3 +1,9 @@
+class scoreBoard {
+  constructor(wins = 0, draws = 0, losses = 0) {
+    (this.wins = wins), (this.draws = draws), (this.losses = losses);
+  }
+}
+
 /**
  * Function that generates a computer play for rock paper scissors.
  * @returns {String}  rock, paper, or scissors
