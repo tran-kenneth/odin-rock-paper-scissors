@@ -2,6 +2,18 @@ class scoreBoard {
   constructor(wins = 0, draws = 0, losses = 0) {
     (this.wins = wins), (this.draws = draws), (this.losses = losses);
   }
+
+  increaseWins() {
+    this.wins++;
+  }
+
+  increaseDraws() {
+    this.draws++;
+  }
+
+  increaseLosses() {
+    this.losses++;
+  }
 }
 
 /**
