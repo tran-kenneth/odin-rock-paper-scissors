@@ -54,10 +54,27 @@ function checkWin(playerMove, computerMove) {
 // Modified playRound function is called on click event.
 // First parameter, is the click event -> extract innerHTML as the player selection.
 function playRound(clickEvent) {
-  const playerSelection = this.innerHTML;
+  const playerSelection = clickEvent.target.innerHTML;
   const computerSelection = computerPlay();
 
   return checkWin(playerSelection, computerSelection);
+}
+
+function updateScore(result, currentScores) {
+  let scoreToIncrease = result.record;
+
+  switch (scoreToIncrease) {
+    case "playerWin":
+      currentScores.increaseWins();
+      break;
+    case "playerLoss":
+      currentScores.increaseLosses();
+      break;
+    case "draw":
+      currentScores.increaseDraws();
+      break;
+  }
+  console.log(currentScores);
 }
 
 function game() {
@@ -65,7 +82,10 @@ function game() {
 
   const gameButtons = document.querySelectorAll(".rps-btn");
   gameButtons.forEach((button) => {
-    button.addEventListener("click", playRound);
+    button.addEventListener("click", (e) => {
+      let roundResult = playRound(e);
+      updateScore(roundResult, playerScores);
+    });
   });
 
   console.log("Game over.");
