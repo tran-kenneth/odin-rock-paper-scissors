@@ -66,14 +66,21 @@ function updateScore(result, currentScores) {
   switch (scoreToIncrease) {
     case "playerWin":
       currentScores.increaseWins();
+      const winScore = document.querySelector(".num-wins");
+      winScore.innerHTML = currentScores.wins;
       break;
     case "playerLoss":
       currentScores.increaseLosses();
+      const lossScore = document.querySelector(".num-losses");
+      lossScore.innerHTML = currentScores.losses;
       break;
     case "draw":
       currentScores.increaseDraws();
+      const drawScore = document.querySelector(".num-draws");
+      drawScore.innerHTML = currentScores.draws;
       break;
   }
+
   console.log(currentScores);
 }
 
