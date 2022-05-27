@@ -92,13 +92,3 @@ function game() {
 }
 
 game();
-
-/*
-  Add event listeners for each rps button.
-  Each button should call the playRound function when clicked.
-*/
-
-// Temporary helper function to log
-function logText(e) {
-  console.log(this.innerHTML);
-}
