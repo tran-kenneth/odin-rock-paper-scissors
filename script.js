@@ -65,6 +65,12 @@ function game() {
     playerLoss: 0,
   };
 
+  const gameButtons = document.querySelectorAll(".rps-btn");
+  gameButtons.forEach((button) => {
+    button.addEventListener("click", playRound);
+  });
+
+  /*
   for (let gameNum = 1; gameNum <= 5; gameNum++) {
     let playerInput = askPlayerInput();
     let roundResult = playRound(playerInput, computerPlay());
@@ -74,24 +80,19 @@ function game() {
     console.log(
       `End of round ${gameNum}.\n Your score is: ${scoreRecord.playerWin} wins, ${scoreRecord.draw} draws, ${scoreRecord.playerLoss} losses.`
     );
-  }
+  }*/
 
   console.log("Game over.");
 }
 
-//game();
+game();
 
 /*
   Add event listeners for each rps button.
   Each button should call the playRound function when clicked.
 */
-const gameButtons = document.querySelectorAll(".rps-btn");
 
 // Temporary helper function to log
 function logText(e) {
   console.log(this.innerHTML);
 }
-
-gameButtons.forEach((button) => {
-  button.addEventListener("click", playRound);
-});
