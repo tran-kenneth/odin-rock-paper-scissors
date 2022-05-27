@@ -80,18 +80,6 @@ function game() {
     button.addEventListener("click", playRound);
   });
 
-  /*
-  for (let gameNum = 1; gameNum <= 5; gameNum++) {
-    let playerInput = askPlayerInput();
-    let roundResult = playRound(playerInput, computerPlay());
-
-    console.log(roundResult.message);
-    scoreRecord[roundResult.record]++;
-    console.log(
-      `End of round ${gameNum}.\n Your score is: ${scoreRecord.playerWin} wins, ${scoreRecord.draw} draws, ${scoreRecord.playerLoss} losses.`
-    );
-  }*/
-
   console.log("Game over.");
 }
 
