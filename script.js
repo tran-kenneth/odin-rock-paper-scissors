@@ -60,18 +60,6 @@ function playRound(clickEvent) {
   return checkWin(playerSelection, computerSelection);
 }
 
-function verifyValidOption(string) {
-  switch (string) {
-    case "rock":
-    case "paper":
-    case "scissors":
-      return true;
-    default:
-      alert("That was an invalid option. Try again.");
-      return false;
-  }
-}
-
 function game() {
   const playerScores = new scoreBoard();
 
