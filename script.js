@@ -77,11 +77,7 @@ function verifyValidOption(string) {
 }
 
 function game() {
-  const scoreRecord = {
-    playerWin: 0,
-    draw: 0,
-    playerLoss: 0,
-  };
+  const playerScores = new scoreBoard();
 
   const gameButtons = document.querySelectorAll(".rps-btn");
   gameButtons.forEach((button) => {
