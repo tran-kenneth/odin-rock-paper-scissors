@@ -4,5 +4,6 @@ The purpose of this project is to learn to implement a javascript script in a we
 
 Progress:
 
-1. Rock Paper Scissors in console - work in progress
-2. Implement GUI - not started
+1. Rock Paper Scissors in console - Completed, replaced with GUI
+2. Implement GUI - Minimum viable product completed
+3. Polish GUI - In progress
