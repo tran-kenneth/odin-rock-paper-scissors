@@ -21,7 +21,7 @@ class scoreBoard {
  * @returns {String}  rock, paper, or scissors
  */
 function computerPlay() {
-  const OPTIONS = ["Rock", "Paper", "Scissors"];
+  const OPTIONS = ["rock", "paper", "scissors"];
   const choice = OPTIONS[Math.floor(Math.random() * 3)];
   return choice;
 }
@@ -36,9 +36,9 @@ function checkWin(playerMove, computerMove) {
     result.message = `It's a draw! Both players selected ${playerMove}!`;
     result.record = "draw";
   } else if (
-    (playerMove == "Rock" && computerMove == "Scissors") ||
-    (playerMove == "Scissors" && computerMove == "Paper") ||
-    (playerMove == "Paper" && computerMove == "Rock")
+    (playerMove == "rock" && computerMove == "scissors") ||
+    (playerMove == "scissors" && computerMove == "paper") ||
+    (playerMove == "paper" && computerMove == "rock")
   ) {
     result.message = `You win! ${playerMove} beats ${computerMove}!`;
     result.record = "playerWin";
@@ -47,14 +47,15 @@ function checkWin(playerMove, computerMove) {
     result.record = "playerLoss";
   }
 
-  console.log(playerMove, computerMove, result);
+  //console.log(playerMove, computerMove, result);
   return result;
 }
 
 // Modified playRound function is called on click event.
 // First parameter, is the click event -> extract innerHTML as the player selection.
 function playRound(clickEvent) {
-  const playerSelection = clickEvent.target.innerHTML;
+  console.log(clickEvent);
+  const playerSelection = clickEvent.target.id;
   const computerSelection = computerPlay();
 
   return checkWin(playerSelection, computerSelection);
