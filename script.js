@@ -94,8 +94,6 @@ function game() {
       updateScore(roundResult, playerScores);
     });
   });
-
-  console.log("Game over.");
 }
 
 game();
